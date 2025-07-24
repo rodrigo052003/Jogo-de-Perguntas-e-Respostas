@@ -1,25 +1,16 @@
 package negocio;
 
 public abstract class Questao {
-    protected String pergunta;
-    protected String[] opcoes;
-    protected int correta;
+    private String pergunta;
 
-    public Questao(String pergunta, String[] opcoes, int correta) {
+    public Questao(String pergunta) {
         this.pergunta = pergunta;
-        this.opcoes = opcoes;
-        this.correta = correta;
     }
 
     public String getPergunta() {
         return pergunta;
     }
 
-    public String[] getOpcoes() {
-        return opcoes;
-    }
-
-    public boolean verificarResposta(int resposta) {
-        return resposta == correta;
-    }
+    public abstract String[] getOpcoes();
+    public abstract boolean verificarResposta(int resposta);
 }
