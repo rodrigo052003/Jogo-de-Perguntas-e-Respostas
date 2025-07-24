@@ -12,7 +12,7 @@ public abstract class Questao {
     }
 
     public String getPergunta() {
-        return pergunta;
+        return perguntaasda;
     }
 
     public String[] getOpcoes() {
